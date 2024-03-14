@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* common */
+        *{}
+        body{}
+        a{text-decoration: none; color: black;}
+        ul{list-style: none; margin: 0px; padding: 0px;}
+
+        /* wrapper */
+        .wrapper{
+        
+        }
+
+        /* wrapper>header */
+        .wrapper>header{
+            display: flex;
+            align-content: center;
+            
+            justify-content: flex-start;
+        }
+        .wrapper>header>.top-header{}
+
+        /* wrapper>header>nav */
+        .wrapper>header>nav{
+            height: 100px;
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wrapper>header>nav>.menu{
+            border: 0px solid red;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            height: 50px;
+
+        }
+        .wrapper>header>nav>.menu>li{
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 0px solid green;
+            /* !! */
+            position: relative;
+        }
+        .wrapper>header>nav>.menu>li>a{
+            border: 0px solid orange;
+            height: 50px;
+            display: block;
+        }
+        .wrapper>header>nav>.menu>li>.submenu{
+            border: 0px solid gray;
+            display: none;
+            background-color: white;
+
+            /* !! */
+            position: absolute;
+            width: 149px;
+            top: 75px;
+            left: 0px;
+        }
+        .wrapper>header>nav>.menu>li>.submenu>li{
+            height: 35px;
+            line-height: 35px;
+            border: 0px solid red;
+        }
+        .wrapper>header>nav>.menu>li>.submenu>li>a{
+            display: block;
+
+        }
+
+
+        .wrapper>header>nav>.menu:hover .submenu{
+            display: block;
+        }
+        .btn{
+            display: inline-block;
+            width: 130px;
+            height: 10px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin: 5px;
+            opacity: .7;
+        }
+        .btn--primary{
+            background-color: brown;
+            
+        }
+        .btn--secondray{
+            background-color: orangered;
+        }
+        .logo{
+            margin: 10px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- .wrapper>header>.top-header+nav^main>section^footer -->
+    <div class="wrapper" style="margin: 0 auto;">
+        <header>
+            <div class="logo">
+
+                <img src="버거킹.PNG">
+               
+               </div>
+               
+               
+            <nav>
+                <!-- ul.menu>li*4>a+ul.submenue>li*4>a -->
+                <ul class="menu" style="margin-left: 10px; display: flex;">
+                    
+                    <li>
+                        <a href="">메뉴소개</a>
+                        <ul class="submenu">
+                            <li><a href="">스페셜&할인팩</a></li>
+                            <li><a href="">신제품NEW</a></li>
+                            <li><a href="">프리미엄</a></li>
+                            <li><a href="">와퍼&주니어</a></li>
+                            <li><a href="">치킨&슈림프버거</a></li>
+                            <li><a href="">올데이킹&킹모닝</a></li>
+                            <li><a href="">사이드</a></li>
+                            <li><a href="">음료&디저트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">매장소개</a>
+                        <ul class="submenu">
+                            <li><a href="">매장찾기</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">이벤트</a>
+                        <ul class="submenu">
+                            <li><a href="">이벤트</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">브랜드스토리</a>
+                        <ul class="submenu">
+                            <li><a href="">BRAND</a></li>
+                            <li><a href="">WHOPPER</a></li>
+                            <li><a href="">COMM.</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.burgerking.co.kr/" class="btn btn--primary">가맹점 문의</a>
+                    </li>
+                    <li>
+                        <a href="https://www.burgerking.co.kr/" class="btn btn--secondray">딜리버리 주문</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            
+            <section>
+                <div class="image" style="width: 100%; display: inline-block;">
+                    <img src="https://d1cua0vf0mkpiy.cloudfront.net/images/web/banner/01db3c99-4acc-448a-9eeb-1a0b7e97281c.png" class="WEB">
+                </div>
+                <div class="ytp-cued-thumbnail-overlay" data-layer="4" style="">
+                    <div class="ytp-cued-thumbnail-overlay-image" style="background-image: url(&quot;https://i.ytimg.com/vi_webp/DoZKif1IOiU/maxresdefault.webp&quot;);">
+                    </div>
+                    <button class="ytp-large-play-button ytp-button ytp-large-play-button-red-bg" aria-label="재생" title="재생"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        문서내 style 태그
+        외부 css link
+        inline style
+        !important
+     -->
+    
+
+    <!-- 문서 내 style태그 사용 -->
+    <style>
+        h1{
+            background-color: orange !important;
+            /* important : 강제로 우선순위를 높임 */
+            color: white;
+        }
+
+    </style>
+    
+    
+    <!-- 외부css 경로 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 충돌하는 스타일이 있으면 마지막 경로에 있는 스타일 적용 -->
+</head>
+<body>
+    
+    <h1 style="background-color: brown;">HELLOWORLD</h1>
+
+
+</body>
+</html>

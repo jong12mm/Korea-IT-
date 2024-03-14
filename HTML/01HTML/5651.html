@@ -1,0 +1,90 @@
+​<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        .container{
+            position: relative;
+            height: 500px;
+            width: 1300px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .container>.slider{
+            width: 1200px;
+            height: 200px;
+            /* border: 1px solid; */
+            margin: 100px auto;
+            padding: 15px;
+
+            display: flex;
+            /* 수평 justify-content:center */
+            justify-content: center;
+            /* 수직 align-items:center */
+            align-items: center;
+            /* 넘쳐 흐르는 부분 숨기기 */
+            /* overflow: hidden; */
+            /* overflow-y:hidden; */
+
+            /* position: relative;
+            left: 0px;
+            top: 0px; */
+        }
+        .container>.slider>.slide{
+            flex-basis: 200px;
+            flex-shrink: 0;
+            width: 200px;
+            height: 150px;
+            border: 1px solid;
+            margin: 10px;
+            background-color: white;
+            transition: .5s;
+        }
+      
+        @keyframes moving {
+            0%,100%{transform: translateX(0px);}
+            10%{transform: translateX(-220px);}
+            20%{transform: translateX(-440px);}
+            30%{transform: translateX(-660px);}
+            40%{transform: translateX(-880px);}
+            50%{transform: translateX(-1100px);}
+            60%{transform: translateX(-880px);}
+            70%{transform: translateX(-660px);}
+            80%{transform: translateX(-440px);}
+            90%{transform: translateX(-220px);}
+        }
+        .container>.slider{
+            animation: moving 30s linear infinite;
+            /* animation-name: moving; */
+        }
+        .container>.slider:hover{
+            /* transform: scale(1.8); */
+           animation-play-state: paused;
+        }
+        .container>.slider>.slide:hover{
+            transform: scale(1.8);
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="slider">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+        </div>
+    </div>
+</body>
+</html>
